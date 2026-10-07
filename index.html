@@ -64,6 +64,7 @@
           <p>A chegada de Dave foi um momento muito importante para a banda. Com Kurt na guitarra e vocal, Krist no baixo e Dave na bateria, o Nirvana finalmente encontrou sua formação mais conhecida. Foi essa formação que gravou os principais trabalhos da banda e que, pouco tempo depois, faria o grupo ficar conhecido no mundo inteiro.</p>
            <button>❤️<span>0</span></button>
            <button>👍<span>0</span></button>
+           <div>
           <h3> Seu primeiro álbum: Bleach</h3>
           <p>Em 1989, o grupo Nirvana lançou seu primeiro álbum</p>
           <p>O disco tinha um som bem mais pesado e agressivo do que os trabalhos que viriam depois. Era uma mistura de punk, rock alternativo e influências do heavy metal. Algumas músicas que se destacam bastante no álbum são About a Girl, Blew, School e Negative Creep.</p>
@@ -73,6 +74,27 @@
           <p>O Nirvana deixou um legado duradouro na história do rock. A banda ajudou a popularizar o grunge internacionalmente e influenciou diversos artistas das décadas seguintes. Suas músicas continuam sendo ouvidas e seus álbuns permanecem importantes referências da música alternativa e do rock dos anos 1990.</p>
           <button>❤️<span>0</span></button>
           <button>👍<span>0</span></button>
+          </div>
+           </article>
         </main>
      </body>
+    <script> 
+        const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else{
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    })
+  </script>
 </html>
